@@ -1,8 +1,12 @@
 ---
 name: compound
-description: Document a recently solved problem to compound your team's knowledge
-argument-hint: "[optional: brief context about the fix]"
+description: 解決した問題をドキュメント化してチームの知識を蓄積する
+argument-hint: "[オプション: 修正内容の簡単な説明]"
 ---
+
+# すべての出力は日本語で行ってください
+
+ユーザーへの説明、質問、ドキュメント作成の報告をすべて日本語で出力してください。
 
 # /compound
 

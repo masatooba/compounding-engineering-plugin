@@ -1,8 +1,20 @@
 ---
 name: plan
-description: Transform feature descriptions into well-structured project plans following conventions
-argument-hint: "[feature description, bug report, or improvement idea]"
+description: 機能説明をプロジェクト規約に沿った構造化されたプランに変換
+argument-hint: "[機能説明、バグ報告、改善アイデア]"
 ---
+
+# すべての出力は日本語で行ってください
+
+ユーザーへの説明、質問、プラン作成の報告をすべて日本語で出力してください。
+
+## プランファイルの出力先と命名規則
+
+**重要**: プランファイルは必ず**カレントディレクトリ**の `./plans/` に作成してください。`~/.claude/plans/` には作成しないでください。
+
+**ファイル名形式**: `日本語タイトル(english-title).md`
+- 例: `ユーザー認証機能(user-authentication).md`
+- 例: `バグ修正(fix-login-error).md`
 
 # Create a plan for a new feature or bug fix
 
