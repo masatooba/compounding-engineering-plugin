@@ -1,12 +1,16 @@
 ---
 name: work
-description: Execute work plans efficiently while maintaining quality and finishing features
-argument-hint: "[plan file, specification, or todo file path]"
+description: プランを効率的に実行し、品質を維持しながら機能を完成させる
+argument-hint: "[プランファイル、仕様書、またはToDoファイルのパス]"
 ---
 
-# Work Plan Execution Command
+# すべての出力は日本語で行ってください
 
-Execute a work plan efficiently while maintaining quality and finishing features.
+ユーザーへの説明、質問、進捗報告、コミットメッセージ以外のすべてを日本語で出力してください。
+
+# 作業プラン実行コマンド
+
+プランを効率的に実行し、品質を維持しながら機能を完成させます。
 
 ## Introduction
 

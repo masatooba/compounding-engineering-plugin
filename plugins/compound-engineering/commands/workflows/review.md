@@ -1,10 +1,14 @@
 ---
 name: review
-description: Perform exhaustive code reviews using multi-agent analysis, ultra-thinking, and worktrees
-argument-hint: "[PR number, GitHub URL, branch name, or latest]"
+description: マルチエージェント分析とworktreeを使った徹底的なコードレビュー
+argument-hint: "[PR番号、GitHub URL、ブランチ名、または latest]"
 ---
 
-# Review Command
+# すべての出力は日本語で行ってください
+
+ユーザーへの説明、質問、レビュー結果の報告をすべて日本語で出力してください。
+
+# レビューコマンド
 
 <command_purpose> Perform exhaustive code reviews using multi-agent analysis, ultra-thinking, and Git worktrees for deep local inspection. </command_purpose>
 

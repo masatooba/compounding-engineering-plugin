@@ -1,8 +1,20 @@
 ---
 name: plan
-description: Transform feature descriptions into well-structured project plans following conventions
-argument-hint: "[feature description, bug report, or improvement idea]"
+description: 機能説明をプロジェクト規約に沿った構造化されたプランに変換
+argument-hint: "[機能説明、バグ報告、改善アイデア]"
 ---
+
+# すべての出力は日本語で行ってください
+
+ユーザーへの説明、質問、プラン作成の報告をすべて日本語で出力してください。
+
+## プランファイルの出力先と命名規則
+
+**重要**: プランファイルは必ず**カレントディレクトリ**の `./plans/` に作成してください。`~/.claude/plans/` には作成しないでください。
+
+**ファイル名形式**: `日本語タイトル(english-title).md`
+- 例: `ユーザー認証機能(user-authentication).md`
+- 例: `バグ修正(fix-login-error).md`
 
 # Create a plan for a new feature or bug fix
 
@@ -367,13 +379,20 @@ end
 
 ## Output Format
 
-Write the plan to `plans/<issue_title>.md`
+Write the plan to the **current working directory**: `./plans/<日本語タイトル>(<english-title>).md`
+
+**Filename format**: `日本語タイトル(english-title).md`
+- 例: `ユーザー認証機能(user-authentication).md`
+- 例: `バグ修正(fix-login-error).md`
+- 例: `試す(try).md`
+
+**IMPORTANT**: Always use the current working directory (where Claude was invoked), NOT `~/.claude/plans/`. The path should be relative to `$PWD`.
 
 ## Post-Generation Options
 
 After writing the plan file, use the **AskUserQuestion tool** to present these options:
 
-**Question:** "Plan ready at `plans/<issue_title>.md`. What would you like to do next?"
+**Question:** "Plan ready at `./plans/<日本語タイトル>(<english-title>).md`. What would you like to do next?"
 
 **Options:**
 1. **Run `/plan_review`** - Get feedback from reviewers (DHH, Kieran, Simplicity)
@@ -402,9 +421,9 @@ When user selects "Create Issue", detect their project tracker from CLAUDE.md:
 
 2. **If GitHub:**
    ```bash
-   # Extract title from plan filename (kebab-case to Title Case)
+   # Extract title from plan filename
    # Read plan content for body
-   gh issue create --title "feat: [Plan Title]" --body-file plans/<issue_title>.md
+   gh issue create --title "feat: [Plan Title]" --body-file "./plans/<日本語タイトル>(<english-title>).md"
    ```
 
 3. **If Linear:**
