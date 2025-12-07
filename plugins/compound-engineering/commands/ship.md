@@ -148,7 +148,49 @@ EOF
 
 ---
 
-## Phase 4: プッシュ
+## Phase 4: 最新のmainを取り込み
+
+### 4.1 mainの最新を取得
+
+```bash
+git fetch origin main
+```
+
+### 4.2 mainをマージまたはリベース
+
+```bash
+# マージの場合
+git merge origin/main
+
+# または、リベースの場合（履歴をきれいにしたい場合）
+# git rebase origin/main
+```
+
+### 4.3 コンフリクトが発生した場合
+
+1. コンフリクトしているファイルを確認
+   ```bash
+   git status
+   ```
+
+2. コンフリクトを解消
+   - 各ファイルを開いて、`<<<<<<<`, `=======`, `>>>>>>>` マーカーを確認
+   - 正しい内容に修正
+   - ユーザーに確認しながら進める
+
+3. 解消後、ステージングしてマージを完了
+   ```bash
+   git add .
+   git merge --continue  # または git rebase --continue
+   ```
+
+### 4.4 コンフリクトがない場合
+
+そのまま次のフェーズへ進む。
+
+---
+
+## Phase 5: プッシュ
 
 ```bash
 git push -u origin $(git branch --show-current)
@@ -156,9 +198,9 @@ git push -u origin $(git branch --show-current)
 
 ---
 
-## Phase 5: PR作成
+## Phase 6: PR作成
 
-### 5.1 PR作成
+### 6.1 PR作成
 
 ```bash
 gh pr create --title "[タイトル]" --body "$(cat <<'EOF'
@@ -186,7 +228,7 @@ EOF
 )"
 ```
 
-### 5.2 完了報告
+### 6.2 完了報告
 
 - PRのURLをユーザーに報告
 - 次のステップ（レビュー依頼、マージ等）を提案
