@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **`/ship` command** - 作業完了後にクリーンな状態でcommit → push → PR作成を行うコマンド。mainブランチへの直接コミット防止、不要ファイルのクリーンアップ、PRにデプロイ後TODO（worktree/staging/production環境での作業）を自動で含める。
 
+## [2.9.2] - 2025-12-04
+
+### Added
+
+- **`/work` command** - Added screenshot documentation step for UI changes. Before creating PRs, use Playwright to capture before/after screenshots, upload via 0x0.st (using imgup skill), and include in PR description.
+
+## [2.9.1] - 2025-12-04
+
+### Changed
+
+- **`/plan` command** - Reordered post-generation options: Review first, Work locally second, Work on remote third (using `&` for background execution). Removed "Rework" as separate option since "Other" handles custom changes.
+
 ## [2.9.0] - 2025-12-02
 
 ### Changed
