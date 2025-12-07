@@ -7,7 +7,7 @@ AI-powered development tools that get smarter with every use. Make each unit of 
 | Component | Count |
 |-----------|-------|
 | Agents | 24 |
-| Commands | 19 |
+| Commands | 20 |
 | Skills | 11 |
 | MCP Servers | 2 |
 
@@ -76,6 +76,7 @@ Core workflow commands (use the short form for autocomplete):
 | `/review` | Run comprehensive code reviews |
 | `/work` | Execute work items systematically |
 | `/compound` | Document solved problems to compound team knowledge |
+| `/ship` | クリーンな状態でcommit、push、PR作成 |
 
 ### Utility Commands
 
